@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-21 14:45+0100\n"
+"POT-Creation-Date: 2017-11-22 15:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: homepage/models.py:14
+msgid "Page d'accueil"
+msgstr ""
+
+#: homepage/models.py:15
+msgid "Pages d'accueil"
+msgstr ""
 
 #: news/templates/news/includes/filter_panel.html:6
 msgid "Recent Posts"
@@ -98,8 +106,16 @@ msgstr ""
 msgid "read more"
 msgstr "Weiter lesen"
 
-#: panorama/templates/pages/pagetable.html:15
+#: panorama/models.py:46 panorama/templates/pages/pagetable.html:15
 msgid "Panorama"
+msgstr ""
+
+#: projetprofphilv4/settings.py:22
+msgid "French"
+msgstr ""
+
+#: projetprofphilv4/settings.py:23
+msgid "German"
 msgstr ""
 
 #: theme/templates/base.html:78
@@ -271,7 +287,11 @@ msgstr ""
 msgid "Ajoute le"
 msgstr "Hinzugefügt den"
 
-#: theme/templates/pages/index.html:33
+#: theme/templates/pages/index.html:30
+msgid "des le"
+msgstr "ab dem"
+
+#: theme/templates/pages/index.html:36
 msgid ""
 "\n"
 "\n"

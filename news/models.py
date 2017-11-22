@@ -17,7 +17,7 @@ class News(Displayable):
     resume = RichTextField(max_length=800, null=True, blank=True)
     news_description = RichTextField("Détails", null=True, blank=True)
     edit_date = models.DateTimeField(auto_now=True)
-    edit_date_label = models.CharField(max_length=100, default="Ajouté le" , null=True, blank=True)
+
 
 
     def get_absolute_url(self):

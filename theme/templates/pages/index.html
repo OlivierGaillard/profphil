@@ -25,7 +25,10 @@
     {% for news in news_list %}
     <p>
         <em>{% trans "Ajoute le" %} {{news.edit_date|date:"d-m-y H:i"}}</em><br>
-        <a href="{% url "news:news_detail" news.pk %}">{{news.title}}</a>
+        <a href="{% url "news:news_detail" news.pk %}">{{news.title}}</a><br>
+        {% if news.date_debut %}
+        {% trans "des le" %} {{news.date_debut}}
+        {% endif %}
     </p>
 
     {% endfor %}

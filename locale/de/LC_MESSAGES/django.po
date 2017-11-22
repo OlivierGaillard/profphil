@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-21 14:45+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: news/templates/news/includes/filter_panel.html:6
+msgid "Recent Posts"
+msgstr ""
+
+#: news/templates/news/includes/filter_panel.html:27
+msgid "Archive"
+msgstr ""
+
+#: news/templates/news/includes/filter_panel.html:43
+msgid "Categories"
+msgstr ""
+
+#: news/templates/news/includes/filter_panel.html:56
+msgid "Tags"
+msgstr ""
+
+#: news/templates/news/includes/filter_panel.html:72
+msgid "Authors"
+msgstr ""
+
+#: news/templates/news/includes/filter_panel.html:84
+msgid "Feeds"
+msgstr ""
+
+#: news/templates/news/includes/filter_panel.html:86
+#: news/templates/news/includes/filter_panel.html:90
+#: news/templates/news/includes/filter_panel.html:94
+#: news/templates/news/includes/filter_panel.html:98
+msgid "RSS"
+msgstr ""
+
+#: news/templates/news/includes/filter_panel.html:87
+#: news/templates/news/includes/filter_panel.html:91
+#: news/templates/news/includes/filter_panel.html:95
+#: news/templates/news/includes/filter_panel.html:99
+msgid "Atom"
+msgstr ""
+
+#: news/templates/news/news_detail.html:25
+msgid "Dates"
+msgstr "Daten"
+
+#: news/templates/news/news_detail.html:27
+#: news/templates/pages/listnews.html:28
+msgid "Date"
+msgstr "Datum"
+
+#: news/templates/news/news_detail.html:31
+msgid "lieu"
+msgstr "Ort"
+
+#: news/templates/news/news_detail.html:35
+msgid "heures"
+msgstr "Zeiten"
+
+#: news/templates/news/news_detail.html:37
+msgid "heure"
+msgstr "Uhr"
+
+#: news/templates/news/news_detail.html:41
+msgid "public cible"
+msgstr "Für wen"
+
+#: news/templates/news/news_detail.html:45
+msgid "resume"
+msgstr "Zusammenfassung"
+
+#: news/templates/news/news_detail.html:52
+msgid "description_label"
+msgstr "Details (clicken)"
+
+#: news/templates/pages/listnews.html:4 news/templates/pages/listnews.html:15
+#: panorama/templates/pages/pagetable.html:4
+msgid "News"
+msgstr ""
+
+#: news/templates/pages/listnews.html:38
+msgid "read more"
+msgstr "Weiter lesen"
+
+#: panorama/templates/pages/pagetable.html:15
+msgid "Panorama"
+msgstr ""
+
+#: theme/templates/base.html:78
+msgid "Toggle Navigation"
+msgstr ""
+
+#: theme/templates/base.html:156
+msgid "Powered by"
+msgstr ""
+
+#: theme/templates/base.html:159
+msgid "and"
+msgstr ""
+
+#: theme/templates/base.html:162
+msgid "Theme by"
+msgstr ""
+
+#: theme/templates/base.html:165
+msgid "View Mobile Site"
+msgstr ""
+
+#: theme/templates/newsletter/common.html:7
+#: theme/templates/newsletter/newsletter_detail.html:10
+#: theme/templates/newsletter/newsletter_list.html:14
+#: theme/templates/newsletter/newsletter_list.html:32
+#: theme/templates/newsletter/subscription_activate.html:5
+#: theme/templates/newsletter/subscription_activate.html:8
+#: theme/templates/newsletter/subscription_subscribe_activated.html:5
+#: theme/templates/newsletter/subscription_subscribe_activated.html:8
+#: theme/templates/newsletter/subscription_unsubscribe_activated.html:5
+#: theme/templates/newsletter/subscription_unsubscribe_activated.html:8
+#: theme/templates/newsletter/subscription_update_activated.html:5
+#: theme/templates/newsletter/subscription_update_activated.html:8
+msgid "Newsletter"
+msgstr ""
+
+#: theme/templates/newsletter/message/message.html:31
+msgid "Read more"
+msgstr "Weiter lesen"
+
+#: theme/templates/newsletter/newsletter_detail.html:5
+msgid "Newsletter detail"
+msgstr ""
+
+#: theme/templates/newsletter/newsletter_list.html:5
+msgid "Newsletter list"
+msgstr ""
+
+#: theme/templates/newsletter/newsletter_list.html:16
+#: theme/templates/newsletter/subscription_subscribe.html:24
+#: theme/templates/newsletter/subscription_subscribe_user.html:22
+msgid "Subscribe"
+msgstr ""
+
+#: theme/templates/newsletter/newsletter_list.html:27
+msgid "Update subscriptions"
+msgstr ""
+
+#: theme/templates/newsletter/submission_archive.html:5
+#: theme/templates/newsletter/submission_archive.html:10
+msgid "Newsletter archive"
+msgstr ""
+
+#: theme/templates/newsletter/subscription_activate.html:5
+#: theme/templates/newsletter/subscription_activate.html:8
+#: theme/templates/newsletter/subscription_subscribe_activated.html:5
+#: theme/templates/newsletter/subscription_subscribe_activated.html:8
+#: theme/templates/newsletter/subscription_unsubscribe_activated.html:5
+#: theme/templates/newsletter/subscription_unsubscribe_activated.html:8
+#: theme/templates/newsletter/subscription_update_activated.html:5
+#: theme/templates/newsletter/subscription_update_activated.html:8
+msgid "activate"
+msgstr ""
+
+#: theme/templates/newsletter/subscription_activate.html:13
+msgid "Activate"
+msgstr ""
+
+#: theme/templates/newsletter/subscription_subscribe.html:5
+#: theme/templates/newsletter/subscription_subscribe.html:8
+#: theme/templates/newsletter/subscription_subscribe_email_sent.html:5
+#: theme/templates/newsletter/subscription_subscribe_email_sent.html:8
+#: theme/templates/newsletter/subscription_subscribe_user.html:5
+#: theme/templates/newsletter/subscription_subscribe_user.html:8
+msgid "Newsletter subscribe"
+msgstr ""
+
+#: theme/templates/newsletter/subscription_subscribe.html:11
+#: theme/templates/newsletter/subscription_unsubscribe.html:11
+#: theme/templates/newsletter/subscription_update.html:11
+msgid ""
+"Due to a technical error we were not able to submit your confirmation email. "
+"This could be because your email address is invalid."
+msgstr ""
+
+#: theme/templates/newsletter/subscription_subscribe_activated.html:10
+msgid "Your subscription has successfully been activated."
+msgstr ""
+
+#: theme/templates/newsletter/subscription_subscribe_email_sent.html:10
+msgid ""
+"Your subscription request was successfully received and an activation email "
+"has been sent to you. In that email you will find a link which you need to "
+"follow in order to activate your subscription."
+msgstr ""
+
+#: theme/templates/newsletter/subscription_subscribe_user.html:19
+msgid "Do you want to subscribe to this newsletter?"
+msgstr ""
+
+#: theme/templates/newsletter/subscription_unsubscribe.html:5
+#: theme/templates/newsletter/subscription_unsubscribe.html:8
+#: theme/templates/newsletter/subscription_unsubscribe_email_sent.html:5
+#: theme/templates/newsletter/subscription_unsubscribe_email_sent.html:8
+#: theme/templates/newsletter/subscription_unsubscribe_user.html:5
+#: theme/templates/newsletter/subscription_unsubscribe_user.html:8
+msgid "Newsletter unsubscribe"
+msgstr ""
+
+#: theme/templates/newsletter/subscription_unsubscribe.html:23
+#: theme/templates/newsletter/subscription_unsubscribe_user.html:23
+msgid "Unsubscribe"
+msgstr ""
+
+#: theme/templates/newsletter/subscription_unsubscribe_activated.html:10
+msgid "You have successfully been unsubscribed."
+msgstr ""
+
+#: theme/templates/newsletter/subscription_unsubscribe_email_sent.html:10
+msgid ""
+"Your unsubscription request has successfully been received. An email has "
+"been sent to you with a link you need to follow in order to confirm your "
+"unsubscription."
+msgstr ""
+
+#: theme/templates/newsletter/subscription_unsubscribe_user.html:20
+msgid "Do you want to unsubscribe from this newsletter?"
+msgstr ""
+
+#: theme/templates/newsletter/subscription_update.html:5
+#: theme/templates/newsletter/subscription_update.html:8
+#: theme/templates/newsletter/subscription_update_email_sent.html:5
+#: theme/templates/newsletter/subscription_update_email_sent.html:8
+msgid "Newsletter update"
+msgstr ""
+
+#: theme/templates/newsletter/subscription_update.html:24
+msgid "Update subscription"
+msgstr ""
+
+#: theme/templates/newsletter/subscription_update_activated.html:10
+msgid "Your subscription has successfully been updated."
+msgstr ""
+
+#: theme/templates/newsletter/subscription_update_email_sent.html:10
+msgid ""
+"Your update request was successfully received and an activation email has "
+"been sent to you. In that email you will find a link which you need to "
+"follow in order to update your subscription."
+msgstr ""
+
+#: theme/templates/pages/index.html:4 theme/templates/pages/index.html:5
+#: theme/templates/pages/index.html:8
+msgid "Home"
+msgstr ""
+
+#: theme/templates/pages/index.html:27
+msgid "Ajoute le"
+msgstr "Hinzugefügt den"
+
+#: theme/templates/pages/index.html:33
+msgid ""
+"\n"
+"\n"
+"\n"
+msgstr ""

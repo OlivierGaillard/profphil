@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+
+{{page.homepage.message_de_bienvenue|safe}}
+
+
+{{page.homepage.content|safe}}
+
+{% endblock %}
+
+
+{% block right_panel %}
+
+    <h4>{{page.homepage.titre_dernieres_nouvelles}}</h4>
+
+    {% for news in news_list %}
+    <p>
+        <em>{% trans "Ajoute le" %} {{news.edit_date|date:"d-m-y H:i"}}</em><br>
+        <a href="{% url "news:news_detail" news.pk %}">{{news.title}}</a>
+    </p>
+
+    {% endfor %}
+
+{% blocktrans %}
+
+
+{% endblocktrans %}
+
+
+
+
+{% endblock %}

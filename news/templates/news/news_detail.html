@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n disqus_tags %}
+{%  get_current_language as LANGUAGE_CODE %}
+
+{% block meta_title %}{{ one_news.meta_title }}{% endblock %}
+
+
+{% block meta_description %}{% metablock %}
+{{ one_news.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% editable blog_post.title %}{{ blog_post.title }}{% endeditable %}
+{% endblock %}
+
+
+{% block main %}
+
+
+
+<h2>{{ one_news.title }}</h2>
+
+
+{% if one_news.date_debut and one_news.date_fin %}
+<p><strong>{% trans "Dates" %}:</strong> {{one_news.date_debut}} &ndash; {{one_news.date_fin}}</p>
+{% elif one_news.date_debut %}
+<p><strong>{% trans "Date" %}:</strong> {{one_news.date_debut}}</p>
+{% endif %}
+
+{% if one_news.lieu %}
+<p><strong>{% trans "lieu" %}:</strong> {{one_news.lieu}}</p>
+{% endif %}
+
+{% if one_news.heure_debut and one_news.heure_fin %}
+<p><strong>{% trans "heures" %}:</strong> {{one_news.heure_debut}} &ndash; {{one_news.heure_fin}}</p>
+{% elif one_news_heure_debut %}
+<p><strong>{% trans "heure" %}:</strong> {{one_news.heure_debut}}</p>
+{% endif %}
+
+{% if one_news.public_cible %}
+<p><strong>{% trans "public cible" %}:</strong> {{one_news.public_cible}}</p>
+{% endif %}
+
+{% if one_news.resume %}
+<h3>{% trans "resume" %}</h3>
+<p>{{ one_news.resume|safe }}</p>
+{% endif %}
+
+
+{% if one_news.news_description %}
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#details">
+    {% trans "description_label" %}</button>
+  <div id="details" class="collapse"><p>{{ one_news.news_description|safe }}</p></div>
+{% endif %}
+
+{% endblock %}

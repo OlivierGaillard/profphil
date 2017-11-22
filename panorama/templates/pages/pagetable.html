@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load i18n mezzanine_tags blog_tags keyword_tags disqus_tags %}
+
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "News" %}{% endif %}{% endblock %}
+
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% if page %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% else %}
+{% trans "Panorama" %}
+{% endif %}
+{% endblock %}
+
+{% block breadcrumb_menu %}
+{{ block.super }}
+{% endblock %}
+
+{% block main %}
+<h2>{{page.pagetable.title}}</h2>
+
+{{ page.pagetable.message|safe }}
+
+
+
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>{{page.pagetable.canton_header}}</th>
+        <th><a href="#" data-toggle="tooltip" title="{{page.pagetable.os_title}}">{{page.pagetable.os}}</a></th>
+        <th><a href="#" data-toggle="tooltip" title="{{page.pagetable.oc_title}}">{{page.pagetable.oc}}</a></th>
+        <th><a href="#" data-toggle="tooltip" title="{{page.pagetable.bmsh_title}}">{{page.pagetable.bmsh}}</a></th>
+        <th><a href="#" data-toggle="tooltip" title="{{page.pagetable.bm10}}">{{page.pagetable.bm10}}</a></th>
+        <th><a href="#" data-toggle="tooltip" title="{{page.pagetable.bc_title}}">{{page.pagetable.bc}}</a></th>
+        <th><a href="#" data-toggle="tooltip" title="{{page.pagetable.cf_title}}">{{page.pagetable.cf}}</a></th>
+        <th><a href="#" data-toggle="tooltip" title="{{page.pagetable.ev_title}}">{{page.pagetable.ev}}</a></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for cant in cantons %}
+    <tr>
+        <th>{{cant.nom}}</th>
+
+        {% if cant.canton_OS %}
+        <td><span class="glyphicon glyphicon-check"></span>{{ cant.get_note_OS|safe }}</td>
+        {% elif cant.canton_OS is False %}
+        <td><span class="glyphicon glyphicon-unchecked"></span>{{ cant.get_note_OS|safe }}</td>
+        {% elif cant.canton_OS is None %}
+        <td>{{ cant.get_note_OS|safe }}</td>
+        {% endif %}
+
+        {% if cant.OC %}
+        <td><span class="glyphicon glyphicon-check"></span>{{ cant.get_note_OC|safe }}</td>
+        {% elif cant.OC is False %}
+        <td><span class="glyphicon glyphicon-unchecked"></span>{{ cant.get_note_OC|safe }}</td>
+        {% elif cant.OC is None %}
+        <td>{{ cant.get_note_OC|safe }}</td>
+        {% endif %}
+
+        {% if cant.BMSH %}
+        <td><span class="glyphicon glyphicon-check"></span>{{ cant.get_note_BMSH|safe }}</td>
+        {% elif cant.BMSH is False %}
+        <td><span class="glyphicon glyphicon-unchecked"></span>{{ cant.get_note_BMSH|safe }}</td>
+        {% elif cant.BMSH is None %}
+        <td>{{ cant.get_note_BMSH|safe }}</td>
+        {% endif %}
+
+        {% if cant.BM10 %}
+        <td><span class="glyphicon glyphicon-check"></span>{{ cant.get_note_BM10|safe }}</td>
+        {% elif cant.BM10 is False %}
+        <td><span class="glyphicon glyphicon-unchecked"></span>{{ cant.get_note_BM10|safe }}</td>
+        {% elif cant.BM10 is None %}
+        <td>{{ cant.get_note_BM10|safe }}</td>
+        {% endif %}
+
+        {% if cant.BC %}
+        <td><span class="glyphicon glyphicon-check"></span>{{ cant.get_note_BC|safe }}</td>
+        {% elif cant.BC is False %}{{ cant.get_note_BC|safe }}
+        <td><span class="glyphicon glyphicon-unchecked"></span>{{ cant.get_note_BC|safe }}</td>
+        {% elif cant.BC is None %}
+        <td>{{ cant.get_note_BC|safe }}</td>
+        {% endif %}
+
+        {% if cant.CF %}
+        <td><span class="glyphicon glyphicon-check"></span>{{ cant.get_note_CF|safe }}</td>
+        {% elif cant.CF is False %}
+        <td><span class="glyphicon glyphicon-unchecked"></span>{{ cant.get_note_CF|safe }}</td>
+        {% elif cant.CF is None %}
+        <td>{{ cant.get_note_CF|safe }}</td>
+        {% endif %}
+
+
+        <td>{{ cant.EV|default:"" }}{{ cant.get_note_EV|safe }}</td>
+
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

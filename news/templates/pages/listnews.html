@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n mezzanine_tags blog_tags keyword_tags disqus_tags %}
+
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "News" %}{% endif %}{% endblock %}
+
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% if page %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% else %}
+{% trans "News" %}
+{% endif %}
+{% endblock %}
+
+{% block breadcrumb_menu %}
+{{ block.super }}
+{% endblock %}
+
+{% block main %}
+<h4>{{page.listnews.titre_general}}</h4>
+
+{% for one_news in news_list %}
+{% editable one_news.title %}
+{% trans "Date" %}: {{ one_news.date_debut }}
+<h4>
+    <a href="{{ one_news.get_absolute_url }}">{{ one_news.title }}</a>
+</h4>
+{% endeditable %}
+
+
+{% block blog_post_list_post_links %}
+<div class="blog-list-detail">
+    <p>
+    <a href="{{ one_news.get_absolute_url }}">{% trans "read more" %}</a>
+    </p>
+</div>
+{% endblock %}
+{% endfor %}
+
+{% comment %}
+{% block right_panel %}
+{% include "news/includes/filter_panel.html" %}
+{% endblock %}
+{% endcomment %}
+{% endblock %}

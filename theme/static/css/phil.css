@@ -1,0 +1,18 @@
+
+/*========================================
+        ProfPhil.ch Small customizations
+==========================================*/
+
+
+
+.navbar-brand {
+  padding: 0px;
+}
+
+#logo {
+  padding-top: 7px;
+  padding-bottom: 0px;
+  padding-right: 5px;
+  width : 95px;
+  height: 45px;
+}

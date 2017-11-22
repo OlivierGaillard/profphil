@@ -2,7 +2,6 @@ RUN
 fabfile.py
 manage.py
 wsgi.py
-__init__.py
 *.pid
 *.pyc
 *.pyo

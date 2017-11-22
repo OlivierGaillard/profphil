@@ -1,7 +1,6 @@
 RUN
 fabfile.py
 manage.py
-wsgi.py
 *.pid
 *.pyc
 *.pyo

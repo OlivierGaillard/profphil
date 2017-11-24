@@ -27,4 +27,27 @@ class News(Displayable):
         ordering = ['-edit_date']
         verbose_name_plural = 'News'
 
+class Membres(models.Model):
+    nummer = models.IntegerField()
+    mandantnummer = models.IntegerField()
+    anrede = models.CharField(max_length=30, null=True, blank=True)
+    titel  = models.CharField(max_length=30, null=True, blank=True)
+    vorname = models.CharField(max_length=100)
+    nachname = models.CharField(max_length=100)
+    firma    = models.CharField(max_length=100, null=True, blank=True)
+    zusatz   = models.CharField(max_length=100, null=True, blank=True)
+    postfach = models.CharField(max_length=100, null=True, blank=True)
+    strasse  = models.CharField(max_length=200)
+    plz      = models.IntegerField()
+    ort      = models.CharField(max_length=200)
+    kanton   = models.CharField(max_length=2)
+    land     = models.CharField(max_length=2, default='CH')
+    austrittsgrund = models.CharField(max_length=300, null=True, blank=True)
+    email    = models.EmailField(null=True, blank=True)
+    geschaeft_phone = models.CharField(null=True, blank=True, max_length=30)
+    mobile_phone     = models.CharField(null=True, blank=True, max_length=30)
+    schulhaus = models.CharField(null=True, blank=True, max_length=150)
+    fachverband = models.CharField(null=True, blank=True, max_length=400)
 
+    class Meta:
+        verbose_name_plural = 'Membres'

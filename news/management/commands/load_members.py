@@ -1,13 +1,14 @@
-from django.test import TestCase
+from django.core.management.base import BaseCommand, CommandError
+from news.models import News
 from news.models import Membres
 import csv
 
-class LoadMembers(TestCase):
+class Command(BaseCommand):
 
-    def test_load_csv(self):
+    def handle(self, *args, **options):
+        n = 0
         with open('membres_org.csv') as csvfile:
             members_reader = csv.reader(csvfile, delimiter=',')
-            n = 0
             for row in members_reader:
 
                 mb, created = Membres.objects.get_or_create(
@@ -36,5 +37,11 @@ class LoadMembers(TestCase):
                     n += 1
                 else:
                     print("not created")
+        self.stdout.write(self.style.SUCCESS('%s members loaded.' % n))
 
-        print("%s membres ajoutes." % n )
+
+
+
+
+
+

@@ -21,6 +21,6 @@ class NewsAdmin(DisplayableAdmin):
 admin.site.register(News, NewsAdmin)
 
 class MembresAdmin(admin.ModelAdmin):
-    list_display = ('vorname', 'nachname')
+    list_display = ('vorname', 'nachname', 'email', 'sprache')
 
 admin.site.register(Membres, MembresAdmin)

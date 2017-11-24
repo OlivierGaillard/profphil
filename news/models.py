@@ -36,6 +36,11 @@ class Membres(models.Model):
     nachname = models.CharField(max_length=100)
     firma    = models.CharField(max_length=100, null=True, blank=True)
     zusatz   = models.CharField(max_length=100, null=True, blank=True)
+    sprache  = models.CharField(choices=(
+        ('DE', 'deutsch'),
+        ('FR', 'français'),
+        ('IT', 'italien'),
+    ), default='DE', max_length=2)
     postfach = models.CharField(max_length=100, null=True, blank=True)
     strasse  = models.CharField(max_length=200)
     plz      = models.IntegerField()
@@ -51,3 +56,4 @@ class Membres(models.Model):
 
     class Meta:
         verbose_name_plural = 'Membres'
+        ordering = ['nachname']
